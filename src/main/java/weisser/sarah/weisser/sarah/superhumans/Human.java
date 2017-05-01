@@ -62,4 +62,8 @@ public class Human {
         System.out.println("Address: " + address);
     }
 
+    public void printName() {
+        System.out.println("Name: " + name);
+    }
+
 }
