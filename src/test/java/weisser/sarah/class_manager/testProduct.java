@@ -29,7 +29,7 @@ public class testProduct {
         Assert.assertEquals(expectedName, actualName);
         Assert.assertEquals(expectedPrice, actualPrice, 0);
         Assert.assertEquals(expectedQuantity, actualQuantity);
-        
+
     }
 
 }
