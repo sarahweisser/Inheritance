@@ -13,7 +13,18 @@ public class Inventory {
         productList.add(product);
     }
 
+    public void removeProductFromInventoryById(int id) {
+        int index = -1;
+        for(Product p : productList) {
+            if(p.getId() == id) {
+                index = productList.indexOf(p);
+            }
+        }
+        productList.remove(productList.get(index));
+    }
+
     public ArrayList<Product> getProductList() {
         return productList;
     }
+
 }

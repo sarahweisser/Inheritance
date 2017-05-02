@@ -6,7 +6,7 @@ import org.junit.Test;
 /**
  * Created by sarahweisser on 5/2/17.
  */
-public class testProduct {
+public class TestProduct {
 
     @Test
     public void testProductFields() {
