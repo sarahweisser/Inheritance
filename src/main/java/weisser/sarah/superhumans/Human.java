@@ -1,4 +1,4 @@
-package weisser.sarah.weisser.sarah.superhumans;
+package weisser.sarah.superhumans;
 
 /**
  * Created by sarahweisser on 5/1/17.
