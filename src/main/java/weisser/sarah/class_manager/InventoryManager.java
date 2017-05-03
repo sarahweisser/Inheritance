@@ -15,5 +15,13 @@ public class InventoryManager {
             return inventory;
         }
 
+        public double getTotalValueOfInventory(Inventory inventory) {
+            double totalValue = 0;
+            for(Product p : inventory.getProductList()) {
+                totalValue += (p.getPrice() * p.getQuantity());
+            }
+            return totalValue;
+        }
+
 
 }
