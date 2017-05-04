@@ -24,6 +24,50 @@ public class TestSavingsAccount {
     }
 
     @Test
+    public void testGetSavingsWithdrawlFee() {
+
+        //given
+        SavingsAccount account = new SavingsAccount("Sarah", 50.00, .05);
+        double expectedResult = 10.00;
+
+        //when
+        double actualResult = account.getWithdrawlFee();
+
+        //then
+        Assert.assertEquals(expectedResult, actualResult, 0);
+
+    }
+
+    @Test
+    public void testGetSavingsUserName() {
+
+        //given
+        SavingsAccount account = new SavingsAccount("Sarah", 50.00, .05);
+        String expectedResult = "Sarah";
+
+        //when
+        String actualResult = account.getUserName();
+
+        //then
+        Assert.assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    public void testGetSavingsInterestRate() {
+
+        //given
+        SavingsAccount account = new SavingsAccount("Sarah", 50.00, .05);
+        double expectedResult = .05;
+
+        //when
+        double actualResult = account.getInterestRate();
+
+        //then
+        Assert.assertEquals(expectedResult, actualResult, 0);
+
+    }
+
+    @Test
     public void testMakeSavingsDeposit() {
 
         //given
@@ -78,6 +122,22 @@ public class TestSavingsAccount {
         SavingsAccount account = new SavingsAccount("Sarah", 50.00, .05);
         account.makeWithdrawl(50.00);
         double expectedResult = 50.00;
+
+        //when
+        double actualResult = account.getBalance();
+
+        //then
+        Assert.assertEquals(expectedResult, actualResult, 0);
+
+    }
+
+    @Test
+    public void testSavingsAccrueInterest() {
+
+        //given
+        SavingsAccount account = new SavingsAccount("Sarah", 50.00, .05);
+        account.accrueInterest();
+        double expectedResult = 52.50;
 
         //when
         double actualResult = account.getBalance();

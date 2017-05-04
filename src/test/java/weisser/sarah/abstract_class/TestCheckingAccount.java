@@ -49,7 +49,7 @@ public class TestCheckingAccount {
 
         //then
         Assert.assertEquals(expectedResult, actualResult);
-        
+
     }
 
     @Test
