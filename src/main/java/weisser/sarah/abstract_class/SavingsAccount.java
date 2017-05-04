@@ -5,15 +5,35 @@ package weisser.sarah.abstract_class;
  */
 public class SavingsAccount extends Account {
 
-    public double getBalance() {
-        return 0;
+    private String userName;
+    private double interestRate;
+    private double withdrawlFee = 10.00;
+
+    public SavingsAccount() {}
+
+    public SavingsAccount(String userName, double accountBalance, double interestRate) {
+
+        super(accountBalance);
+        this.userName = userName;
+        this.interestRate = interestRate;
     }
 
-    public void makeDeposit() {
-
+    public double getWithdrawlFee() {
+        return withdrawlFee;
     }
 
-    public void makeWithdrawl() {
+    public double getInterestRate() {
+        return interestRate;
+    }
 
+
+    @Override
+    public void makeWithdrawl(double withdrawlAmt) {
+        super.makeWithdrawl(withdrawlAmt + withdrawlFee);
+    }
+
+    public String printBalance() {
+        String displayBalance = String.format("Account balance for " + userName + " is: $%.2f, and interest rate is: " + interestRate * 100 + " percent.", super.getBalance());
+        return displayBalance;
     }
 }

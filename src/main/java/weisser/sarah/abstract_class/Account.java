@@ -6,12 +6,34 @@ package weisser.sarah.abstract_class;
 public abstract class Account {
 
     protected double accountBalance;
-    protected double minimumBalance;
 
-    public abstract double getBalance();
+    public Account() {}
 
-    public abstract void makeDeposit();
+    public Account(double accountBalance) {
+        this.accountBalance = accountBalance;
+    }
 
-    public abstract void makeWithdrawl();
+    public double getBalance() {
+        return accountBalance;
+    }
+
+    public void makeDeposit(double depositAmt){
+        accountBalance += depositAmt;
+    }
+
+    public void makeWithdrawl(double withdrawlAmt) {
+        if(accountBalance >= withdrawlAmt) {
+            accountBalance -= withdrawlAmt;
+        }
+        else {
+            printInsufficientFunds();
+        }
+    }
+
+    public String printInsufficientFunds() {
+        return "Insufficient Funds.";
+    }
+
+    public abstract String printBalance();
 
 }

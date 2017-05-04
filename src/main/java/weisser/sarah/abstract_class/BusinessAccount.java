@@ -9,6 +9,10 @@ public class BusinessAccount extends Account {
         return 0;
     }
 
+    public String printBalance() {
+        return null;
+    }
+
     public void makeDeposit() {
 
     }
