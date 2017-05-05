@@ -1,4 +1,4 @@
-package weisser.sarah;
+package weisser.sarah.polymorphism;
 
 import org.junit.Assert;
 import org.junit.Test;

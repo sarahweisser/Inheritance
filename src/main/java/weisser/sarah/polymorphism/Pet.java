@@ -6,6 +6,7 @@ package weisser.sarah.polymorphism;
 public class Pet {
 
     protected String name;
+    protected String species = "pet";
 
     public Pet() {}
 
@@ -18,6 +19,9 @@ public class Pet {
     }
     public String getName() {
         return name;
+    }
+    public String getSpecies() {
+        return species;
     }
 
     public String speak() {

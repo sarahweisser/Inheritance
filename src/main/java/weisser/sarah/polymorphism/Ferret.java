@@ -5,8 +5,14 @@ package weisser.sarah.polymorphism;
  */
 public class Ferret extends Pet {
 
+    private String species = "ferret";
+
     public Ferret(String name) {
         super(name);
+    }
+
+    public String getSpecies() {
+        return species;
     }
 
     @Override

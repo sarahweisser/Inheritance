@@ -2,6 +2,7 @@ package weisser.sarah.polymorphism;
 
 import java.util.Scanner;
 
+
 /**
  * Created by sarahweisser on 5/5/17.
  */
@@ -9,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.print("How many pets do you have?");
+    /*    System.out.print("How many pets do you have?");
         Scanner scanner = new Scanner(System.in);
         int numberOfPets = scanner.nextInt();
         String[][] pets = new String[numberOfPets][2];
@@ -24,5 +25,13 @@ public class Main {
         for(int i = 0; i < pets.length; i++) {
             System.out.println("Type: " + pets[i][0] + "\tName: " + pets[i][1]);
         }
+    } */
+
+       Input input = new Input();
+       int numberOfPets = input.getUserNumOfPets();
+       Pet[] pets = new Pet[numberOfPets];
+       pets = input.makePetArray(numberOfPets);
+       System.out.println(input.printPetsArray(pets));
+
     }
 }
