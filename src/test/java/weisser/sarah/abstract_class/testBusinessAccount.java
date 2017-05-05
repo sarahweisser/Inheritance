@@ -37,7 +37,7 @@ public class testBusinessAccount {
 
         //then
         Assert.assertEquals(expectedResult[0], actualResult[0]);
-        
+
     }
 
     @Test
