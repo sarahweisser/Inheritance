@@ -26,7 +26,7 @@ public abstract class Account {
             accountBalance -= withdrawlAmt;
         }
         else {
-            printInsufficientFunds();
+            System.out.println(printInsufficientFunds());
         }
     }
 
