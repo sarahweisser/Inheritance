@@ -6,7 +6,7 @@ import org.junit.Test;
 /**
  * Created by sarahweisser on 5/5/17.
  */
-public class testBusinessAccount {
+public class TestBusinessAccount {
 
     @Test
     public void testBusinessAccount() {
